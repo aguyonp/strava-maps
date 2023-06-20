@@ -1,0 +1,16 @@
+name: Build and Deploy Strava Maps
+on:
+  workflow_dispatch:
+  push:
+    branches:
+      - main
+      - develop
+      
+  
+jobs:
+  build:
+    runs-on: self-hosted
+    
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v2
